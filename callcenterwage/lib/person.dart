@@ -8,6 +8,7 @@ class Person {
   int _doublePayAbsent;
   int _doublePayLate;
 
+  // Constructor
   Person({
     required String name,
     required int age,
@@ -26,7 +27,7 @@ class Person {
        _doublePayAbsent = doublePayAbsent,
        _doublePayLate = doublePayLate;
 
-  // getters
+  // Getters
   String get name => _name;
   int get age => _age;
   int get days => _days;
@@ -36,32 +37,12 @@ class Person {
   int get doublePayAbsent => _doublePayAbsent;
   int get doublePayLate => _doublePayLate;
 
-  set name(String v) => _name = v;
-  set age(int v) {
-    if (v >= 0) _age = v;
-  }
-
-  set days(int v) {
-    if (v >= 0) _days = v;
-  }
-
-  set hoursWorking(int v) {
-    if (v >= 0) _hoursWorking = v;
-  }
-
-  set hoursLate(int v) {
-    if (v >= 0) _hoursLate = v;
-  }
-
-  set doublePayDays(int v) {
-    if (v >= 0) _doublePayDays = v;
-  }
-
-  set doublePayAbsent(int v) {
-    if (v >= 0) _doublePayAbsent = v;
-  }
-
-  set doublePayLate(int v) {
-    if (v >= 0) _doublePayLate = v;
+  // Method
+  void printInfo() {
+    print("Name: $_name, Age: $_age");
+    print(
+      "Days: $_days, Hours working: $_hoursWorking, Hours late: $_hoursLate, "
+      "Double pay days: $_doublePayDays, Double pay absent: $_doublePayAbsent, Double pay late: $_doublePayLate",
+    );
   }
 }

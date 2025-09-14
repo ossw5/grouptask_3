@@ -11,11 +11,7 @@ class TotalWage {
     Bwage bwage = Bwage(_person);
     DoublePay dp = DoublePay(_person);
 
-    int baseWage = bwage.computeWage();
-    int dpWage = dp.computeDoublePayWage();
-
-    // Add double pay, but still considers deduction if base is negative
-    return baseWage + dpWage;
+    return bwage.computeWage() + dp.computeDoublePayWage();
   }
 
   void printBreakdown() {

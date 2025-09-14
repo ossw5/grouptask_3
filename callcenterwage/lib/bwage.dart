@@ -5,12 +5,13 @@ class Bwage extends Wage {
   Bwage(Person person) : super(person);
 
   @override
-  int computeWage() {
-    int base = super.computeWage();
-    int deduction = person.hoursLate * 80; // Deduction: 80 per hour late
+  int computeWage({int ratePerHour = 80}) {
+    int base = super.computeWage(ratePerHour: ratePerHour);
+
+    // Deduct late hours (applies to base wage only)
+    int deduction = person.hoursLate * ratePerHour;
     int finalWage = base - deduction;
 
-    // Prevent negative wage
     return finalWage < 0 ? 0 : finalWage;
   }
 }

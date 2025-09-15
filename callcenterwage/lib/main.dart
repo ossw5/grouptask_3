@@ -4,13 +4,13 @@ import 'totalwage.dart';
 void main() {
   var p1 = Person(
     name: "Trecia",
-    age: 20,
-    days: 2,
-    hoursWorking: 0,
-    hoursLate: 0,
-    doublePayDays: 2,
-    doublePayAbsent: 0,
-    doublePayLate: 0,
+    age: 50,
+    days: 15,
+    hoursWorking: 10,
+    hoursLate: 40,
+    doublePayDays: 4,
+    doublePayAbsent: 3,
+    doublePayLate: 3,
   );
 
   var total = TotalWage(p1);

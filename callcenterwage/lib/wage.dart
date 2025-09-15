@@ -8,7 +8,6 @@ class Wage {
   Person get person => _person;
 
   int computeWage({int ratePerHour = 80}) {
-    // Base hours from days + extra hours
     int hours = (person.days * 8) + person.hoursWorking;
     return hours * ratePerHour;
   }

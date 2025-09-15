@@ -8,7 +8,6 @@ class Bwage extends Wage {
   int computeWage({int ratePerHour = 80}) {
     int base = super.computeWage(ratePerHour: ratePerHour);
 
-    // Deduct late hours (applies to base wage only)
     int deduction = person.hoursLate * ratePerHour;
     int finalWage = base - deduction;
 
